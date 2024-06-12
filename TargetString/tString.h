@@ -14,7 +14,7 @@ public:
 	tString	( const tString& other );	// контсруктор копирования
 	tString	( tString&& other ) noexcept;	// конструктор перемещения 
 
-   ~tString ();					// деструктор
+       ~tString ();					// деструктор
 
 	tString& operator=  ( const tString& other );		// опрератор присваивания строки
 	tString& operator=  ( const char ch );			// опрератор присваивания символа
