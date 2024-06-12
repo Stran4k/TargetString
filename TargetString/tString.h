@@ -9,32 +9,32 @@ private:
 
 public:
 
-	tString ();								// конструктор по умоолчанию
-	tString	( const char* str );			// конструктор с параметром
-	tString	( const tString& other );		// контсруктор копирования
-	tString	( tString&& other ) noexcept;	// конструктор перемещения 
+	tString ();				// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕРѕР»С‡Р°РЅРёСЋ
+	tString	( const char* str );		// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂРѕРј
+	tString	( const tString& other );	// РєРѕРЅС‚СЃСЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+	tString	( tString&& other ) noexcept;	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРµСЂРµРјРµС‰РµРЅРёСЏ 
 
-   ~tString ();								// деструктор
+   ~tString ();					// РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 
-	tString& operator=  ( const tString& other );		// опрератор присваивания строки
-	tString& operator=  ( const char ch );				// опрератор присваивания символа
-	tString& operator=	(  tString&& other ) noexcept;	// оператор присвания перемещением
+	tString& operator=  ( const tString& other );		// РѕРїСЂРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ СЃС‚СЂРѕРєРё
+	tString& operator=  ( const char ch );			// РѕРїСЂРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ СЃРёРјРІРѕР»Р°
+	tString& operator=	(  tString&& other ) noexcept;	// РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РЅРёСЏ РїРµСЂРµРјРµС‰РµРЅРёРµРј
 
-	tString  operator+  ( const tString& other );		// оператор сложения со строкой 
-	tString  operator+  ( const char ch );				// оператор сложения с символом
+	tString  operator+  ( const tString& other );		// РѕРїРµСЂР°С‚РѕСЂ СЃР»РѕР¶РµРЅРёСЏ СЃРѕ СЃС‚СЂРѕРєРѕР№ 
+	tString  operator+  ( const char ch );				// РѕРїРµСЂР°С‚РѕСЂ СЃР»РѕР¶РµРЅРёСЏ СЃ СЃРёРјРІРѕР»РѕРј
 
-	tString& operator+= ( const tString& other );		// оператор добавления к строке строки
-	tString& operator+= ( const char ch );				// оператор добавления к строке символа
+	tString& operator+= ( const tString& other );		// РѕРїРµСЂР°С‚РѕСЂ РґРѕР±Р°РІР»РµРЅРёСЏ Рє СЃС‚СЂРѕРєРµ СЃС‚СЂРѕРєРё
+	tString& operator+= ( const char ch );				// РѕРїРµСЂР°С‚РѕСЂ РґРѕР±Р°РІР»РµРЅРёСЏ Рє СЃС‚СЂРѕРєРµ СЃРёРјРІРѕР»Р°
 
-	bool	 operator==	( const tString& other );		// оператор сравнения
-	bool	 operator!=	( const tString& other );		// оператор сравнения
+	bool	 operator==	( const tString& other );		// РѕРїРµСЂР°С‚РѕСЂ СЃСЂР°РІРЅРµРЅРёСЏ
+	bool	 operator!=	( const tString& other );		// РѕРїРµСЂР°С‚РѕСЂ СЃСЂР°РІРЅРµРЅРёСЏ
 	
-	char&	 operator[]	( const size_t index );			// оператор получения по индексу
+	char&	 operator[]	( const size_t index );			// РѕРїРµСЂР°С‚РѕСЂ РїРѕР»СѓС‡РµРЅРёСЏ РїРѕ РёРЅРґРµРєСЃСѓ
 
-	friend std::ostream& operator<<(std::ostream& os, const tString& str);	// вспомогательный оператор для вывода на консоль
-	friend std::istream& operator>>(std::istream& is,  tString& str);		// вспомогательный оператор для ввода c консолиым 
+	friend std::ostream& operator<<(std::ostream& os, const tString& str);	// РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ РґР»СЏ РІС‹РІРѕРґР° РЅР° РєРѕРЅСЃРѕР»СЊ
+	friend std::istream& operator>>(std::istream& is,  tString& str);		// РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ РґР»СЏ РІРІРѕРґР° c РєРѕРЅСЃРѕР»РёС‹Рј 
 
-	size_t get_len ();	// получения длинны
-	char*  get_str ();	// получения строки
+	size_t get_len ();	// РїРѕР»СѓС‡РµРЅРёСЏ РґР»РёРЅРЅС‹
+	char*  get_str ();	// РїРѕР»СѓС‡РµРЅРёСЏ СЃС‚СЂРѕРєРё
 
 };
